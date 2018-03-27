@@ -10,70 +10,11 @@ If you're looking to run [fully featured TensorFlow](https://github.com/tensorfl
 
 _As a quick note, if you're looking for officially supported TensorFlow/Raspberry Pi functionality, you can also check out using the [Makefile contrib module](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/makefile). It builds a static C++ library instead of the standard Python library, but is very powerful._
 
-### Contents
-
-* [Installing from pip (easy)](#installing-from-pip)
-* [Building from source (hard)](#building-from-source)
-* [Docker image](#docker-image)
-* [Credits](#credits)
-* [License](#license)
-
-## Installing from Pip
-
-**Note: These are unofficial binaries (though built from the minimally modified official source), and thus there is no expectation of support from the TensorFlow team. Please don't create issues for these files in the official TensorFlow repository.**
-
-This is the easiest way to get TensorFlow onto your Raspberry Pi 3. Note that currently, the pre-built binary is targeted for Raspberry Pi 3 running Raspbian 9.0 ("Stretch"), so this may or may not work for you. The specific OS release is the following:
-
-```
-Raspbian 9.0 "Stretch"
-```
-
-First, install the dependencies for TensorFlow:
-
-```shell
-sudo apt-get update
-
-# For Python 3.5
-sudo apt-get install python3-pip python3-dev
-```
-
-Next, download the wheel file from this repository and install it:
-
-```shell
-# For Python 3.5
-wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.1.0/tensorflow-1.1.0-cp34-cp34m-linux_armv7l.whl
-sudo pip3 install tensorflow-1.1.0-cp34-cp34m-linux_armv7l.whl
-```
-
-Finally, we need to reinstall the `mock` library to keep it from throwing an error when we import TensorFlow:
-
-```shell
-# For Python 3.5
-sudo pip3 uninstall mock
-sudo pip3 install mock
-```
-
-And that should be it!
-
-### Docker image
-
-Instructions on setting up a Docker image to run on Raspberry Pi are being maintained by @romilly [here](https://github.com/romilly/rpi-docker-tensorflow), and a pre-built image is hosted on DockerHub [here](https://hub.docker.com/r/romilly/rpi-docker-tensorflow/). Woot!
-
-### Troubleshooting
-
-_This section will attempt to maintain a list of remedies for problems that may occur while installing from `pip`_
-
-#### "tensorflow-1.5.0-cp35-none-linux_armv7l.whl is not a supported wheel on this platform."
-
-This wheel was built with Python 3.5, and can't be installed with a version of `pip` that uses Python 2. 
-
-**Note: the provided binaries are for Python 3.5 _only_. If you've installed Python 3.6 from source on your machine, you'll need to either explicitly install these wheels for 3.5, or you'll need to build TensorFlow [from source](GUIDE.md).**
-
 ## Building from Source
 
 [_Step-by-step guide_](GUIDE.md)
 
-If you aren't able to make the wheel file from the previous section work, you may need to build from source. Additionally, if you want to use features that have not been included in an official release, such as the [initial distributed runtime](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/core/distributed_runtime), you'll have to build from source. Don't worry, as we've figured out most of the quirks of getting it right. The guide will be updated as needed to be as correct as possible.
+Ugh, so it looks like the wheel I made was in tmp and is gone :( and I'm not going to make it again, BUT I've updated the guide so its pretty easy (but time consuming) for you to build by source. 
 
 See the [step-by-step guide here](GUIDE.md). **Warning: it takes a while.**
 

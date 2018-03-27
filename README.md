@@ -47,10 +47,6 @@ And that should be it!
 
 ## Building from Source
 
-[_Step-by-step guide_](GUIDE.md)
-
-Ugh, so it looks like the wheel I made was in tmp and is gone :( and I'm not going to make it again, BUT I've updated the guide so its pretty easy (but time consuming) for you to build by source. 
-
 See the [step-by-step guide here](GUIDE.md). **Warning: it takes a while.**
 
 ## Non-Raspberry Pi Model 3 builds

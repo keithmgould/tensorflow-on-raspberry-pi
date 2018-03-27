@@ -4,7 +4,7 @@
 
 I (Keith) am not asking for donations, but the original author is. Here is his message, and to be clear, donations will go to him, not me:
 
-If you find the binaries and instructions in this repository useful, [please consider donating to help keep this repository maintained](https://pledgie.com/campaigns/33260). It takes hours of work to compile each new version of TensorFlow, in addition to time spent responding to issues and pull requests.
+*If you find the binaries and instructions in this repository useful, [please consider donating to help keep this repository maintained](https://pledgie.com/campaigns/33260). It takes hours of work to compile each new version of TensorFlow, in addition to time spent responding to issues and pull requests.*
 
 ## Intro
 

@@ -2,7 +2,7 @@
 
 ## Donate
 
-If you find the binaries and instructions in this repository useful, [please consider donating to help keep this repository maintained](https://pledgie.com/campaigns/33260). It takes hours of work to compile each new version of TensorFlow, in addition to time spent responding to issues and pull requests.
+If you find the binaries and instructions in this repository useful, [please consider donating to the original author to help keep this repository maintained](https://pledgie.com/campaigns/33260). It takes hours of work to compile each new version of TensorFlow, in addition to time spent responding to issues and pull requests.
 
 ## Intro
 

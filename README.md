@@ -6,7 +6,7 @@ I (Keith) am not asking for donations, but the original author is. If you find t
 
 ## Intro
 
-If you're looking to run [fully featured TensorFlow](https://github.com/tensorflow/tensorflow) or [Bazel](https://github.com/bazelbuild/bazel) on a Raspberry Pi 3, you're in the right place. This repo contains step-by-step instructions for installing TensorFlow 1.5.1 from source using Bazel (which is also compiled from-scratch), as well as pre-built TensorFlow binaries.
+If you're looking to run [fully featured TensorFlow](https://github.com/tensorflow/tensorflow) or [Bazel](https://github.com/bazelbuild/bazel) on a Raspberry Pi 3, you're in the right place. This repo contains step-by-step instructions for installing TensorFlow 1.5.1 from source using Bazel (which is also compiled from-scratch).
 
 _As a quick note, if you're looking for officially supported TensorFlow/Raspberry Pi functionality, you can also check out using the [Makefile contrib module](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/makefile). It builds a static C++ library instead of the standard Python library, but is very powerful._
 

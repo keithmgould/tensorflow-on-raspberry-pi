@@ -33,18 +33,14 @@ First, install the dependencies for TensorFlow:
 ```shell
 sudo apt-get update
 
-# For Python 3.3+
+# For Python 3.5
 sudo apt-get install python3-pip python3-dev
 ```
 
 Next, download the wheel file from this repository and install it:
 
 ```shell
-# For Python 2.7
-wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.1.0/tensorflow-1.1.0-cp27-none-linux_armv7l.whl
-sudo pip install tensorflow-1.1.0-cp27-none-linux_armv7l.whl
-
-# For Python 3.4
+# For Python 3.5
 wget https://github.com/samjabrahams/tensorflow-on-raspberry-pi/releases/download/v1.1.0/tensorflow-1.1.0-cp34-cp34m-linux_armv7l.whl
 sudo pip3 install tensorflow-1.1.0-cp34-cp34m-linux_armv7l.whl
 ```
@@ -67,21 +63,11 @@ Instructions on setting up a Docker image to run on Raspberry Pi are being maint
 
 _This section will attempt to maintain a list of remedies for problems that may occur while installing from `pip`_
 
-#### "tensorflow-1.1.0-cp27-none-linux_armv7l.whl is not a supported wheel on this platform."
+#### "tensorflow-1.5.0-cp35-none-linux_armv7l.whl is not a supported wheel on this platform."
 
-This wheel was built with Python 2.7, and can't be installed with a version of `pip` that uses Python 3. If you get the above message, try running the following command instead:
+This wheel was built with Python 3.5, and can't be installed with a version of `pip` that uses Python 2. 
 
-```
-sudo pip2 install tensorflow-1.1.0-cp27-none-linux_armv7l.whl
-```
-
-Vice-versa for trying to install the Python 3 wheel. If you get the error "tensorflow-1.1.0-cp34-cp34m-any.whl is not a supported wheel on this platform.", try this command:
-
-```
-sudo pip3 install tensorflow-1.1.0-cp34-cp34m-linux_armv7l.whl
-```
-
-**Note: the provided binaries are for Python 2.7 and 3.4 _only_. If you've installed Python 3.5/3.6 from source on your machine, you'll need to either explicitly install these wheels for 3.4, or you'll need to build TensorFlow [from source](GUIDE.md). Once there's an officially supported installation of Python 3.5+, this repo will start including wheels for those versions.**
+**Note: the provided binaries are for Python 3.5 _only_. If you've installed Python 3.6 from source on your machine, you'll need to either explicitly install these wheels for 3.5, or you'll need to build TensorFlow [from source](GUIDE.md).**
 
 ## Building from Source
 

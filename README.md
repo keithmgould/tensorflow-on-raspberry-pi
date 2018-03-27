@@ -33,7 +33,6 @@ Next, download the wheel file from this repository and install it:
 
 ```shell
 wget https://github.com/keithmgould/tensorflow-on-raspberry-pi/releases/download/v1.5.1/tensorflow-1.5.1-cp35-cp35m-linux_armv7l.whl
-
 sudo pip3 install tensorflow-1.5.1-cp35-cp35m-linux_armv7l.whl
 ```
 

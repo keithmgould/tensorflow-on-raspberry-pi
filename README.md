@@ -6,9 +6,43 @@ I (Keith) am not asking for donations, but the original author is. If you find t
 
 ## Intro
 
-If you're looking to run [fully featured TensorFlow](https://github.com/tensorflow/tensorflow) or [Bazel](https://github.com/bazelbuild/bazel) on a Raspberry Pi 3, you're in the right place. This repo contains step-by-step instructions for installing TensorFlow 1.5.1 from source using Bazel (which is also compiled from-scratch).
+If you're looking to run [fully featured TensorFlow](https://github.com/tensorflow/tensorflow) or [Bazel](https://github.com/bazelbuild/bazel) on a Raspberry Pi 3, you're in the right place.
+
+**This repo includes the whl binary so you don't have to go through the pain of compiling from scratch...**
+
+This repo also contains step-by-step instructions for installing TensorFlow 1.5.1 from source using Bazel (which is also compiled from-scratch) on Python 3.5.
 
 _As a quick note, if you're looking for officially supported TensorFlow/Raspberry Pi functionality, you can also check out using the [Makefile contrib module](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/makefile). It builds a static C++ library instead of the standard Python library, but is very powerful._
+
+## Installing from Pip3
+
+**Note: These are unofficial binaries (though built from the minimally modified official source), and thus there is no expectation of support from the TensorFlow team. Please don't create issues for these files in the official TensorFlow repository.**
+
+This is the easiest way to get TensorFlow 1.5.1 onto your Raspberry Pi 3 for Python 3.5. Note that currently, the pre-built binary is targeted for Raspberry Pi 3 running Raspbian 9.0 ("Stretch"), so this may or may not work for you. The specific OS release is the following:
+
+First, install the dependencies for TensorFlow:
+
+```shell
+sudo apt-get update
+sudo apt-get install python3-pip python3-dev
+```
+
+Next, download the wheel file from this repository and install it:
+
+```shell
+wget https://github.com/keithmgould/tensorflow-on-raspberry-pi/releases/download/v1.5.1/tensorflow-1.5.1-cp35-cp35m-linux_armv7l.whl
+
+sudo pip3 install tensorflow-1.5.1-cp35-cp35m-linux_armv7l.whl
+```
+
+Finally, we need to reinstall the `mock` library to keep it from throwing an error when we import TensorFlow:
+
+```shell
+sudo pip3 uninstall mock
+sudo pip3 install mock
+```
+
+And that should be it!
 
 ## Building from Source
 
